@@ -2,13 +2,13 @@ header {
   background-color: black
 }
 
-header h1 {
+.header-logo {
   color: white;
   font-size: 24px;
-  padding-top: 10px;
+  font-weight: bold;
 }
 
-header a {
+.header-right {
   margin: 10px;
   float: right;
 }
