@@ -9,6 +9,22 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="container">
+        <header>
+          <div class="row">
+            <div class="col-6">
+              <h1>Todo app</h1>
+            </div>
+            <div class="col-6">
+              <a class="btn btn-primary" href="#" role="button">新しいタスクを作成</a>
+            </div>
+          </div>
+        </header>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
