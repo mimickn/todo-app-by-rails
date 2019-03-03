@@ -1,13 +1,15 @@
 class TasksController < ApplicationController
+  before_action :set_current_user
+  
   def index
-    @tasks = Task.all
+    @tasks = Task.where(user_id: @current_user.id)
   end
   
   def new
   end
   
   def create
-    @task = Task.new(content: params[:content])
+    @task = Task.new(content: params[:content], user_id: @current_user.id)
     if @task.save
       redirect_to("/tasks/index")
     else
