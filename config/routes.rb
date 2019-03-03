@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get  'users/new' => 'users#new'
+  post 'users/create' => 'users#create'
+  get  'users/:id/edit' => 'users#edit'
+  post 'users/:id/update' => 'users#update'
+  get  'users/:id/show' => 'users#show'
+  post 'users/:id/delete' => 'users#delete'
+
   root 'tasks#index'
   get  'tasks/index' => 'tasks#index'
   get  'tasks/new' => 'tasks#new'
