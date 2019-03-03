@@ -1,3 +1,4 @@
 <h1><%= @user.name %></h1>
 <%= link_to("編集", "/users/#{@user.id}/edit", class: "btn btn-warning btn-sm") %>
 <%= link_to("削除", "/users/#{@user.id}/delete", class: "btn btn-warning btn-sm", method: "post") %>
+<%= link_to("ログアウト", "/logout", class: "btn btn-success btn-sm", method: "post") %>

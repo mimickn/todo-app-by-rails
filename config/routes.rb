@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
+  root 'home#top'
+
   get  'users/new' => 'users#new'
   post 'users/create' => 'users#create'
   get  'users/:id/edit' => 'users#edit'
   post 'users/:id/update' => 'users#update'
-  get  'users/:id/show' => 'users#show'
+  get  'users/:id' => 'users#show'
   post 'users/:id/delete' => 'users#delete'
+  get  'login' => 'users#login_form'
+  post 'login' => 'users#login'
+  post 'logout' => 'users#logout'
 
-  root 'tasks#index'
   get  'tasks/index' => 'tasks#index'
   get  'tasks/new' => 'tasks#new'
   post 'tasks/create' => 'tasks#create'

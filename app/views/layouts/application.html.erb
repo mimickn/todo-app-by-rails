@@ -15,11 +15,20 @@
           <div class="row">
             <div class="col-sm-6">
               <h1>
-                <%= link_to("Todo app", "/", class: "header-logo") %>
+                <% if @current_user %>
+                  <%= link_to("TODO APP by Rails", "/tasks/index", class: "header-logo") %>
+                <% else %>
+                  <%= link_to("TODO APP by Rails", "/", class: "header-logo") %>
+                <% end %>
               </h1>
             </div>
             <div class="col-sm-6">
-              <a class="header-right btn btn-primary" href="/tasks/new" role="button">新しいタスクを作成</a>
+              <% if @current_user %>
+                <%= link_to("新しいタスクを作成", "/tasks/new", class: "header-right btn btn-primary") %>
+                <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}", class: "header-right btn btn-success") %>
+              <% else %>
+                <%= link_to("ログイン", "/login", class: "header-right btn btn-primary") %>
+              <% end %>
             </div>
           </div>
         </header>
