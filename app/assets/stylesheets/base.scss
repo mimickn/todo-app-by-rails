@@ -6,6 +6,10 @@ header {
   color: white;
   font-size: 24px;
   font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .header-right {
