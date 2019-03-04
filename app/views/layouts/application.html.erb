@@ -28,6 +28,7 @@
                 <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}", class: "header-right btn btn-success") %>
               <% else %>
                 <%= link_to("ログイン", "/login", class: "header-right btn btn-primary") %>
+                <%= link_to("ユーザ登録", "/users/new", class: "header-right btn btn-success") %>
               <% end %>
             </div>
           </div>
