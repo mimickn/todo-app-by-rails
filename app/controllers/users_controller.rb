@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     user.name = params[:name]
     user.password = params[:password]
     if user.save
-      redirect_to("/users/#{user.id}/show")
+      redirect_to("/users/#{user.id}")
     else
       render("users/edit")
     end
