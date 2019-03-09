@@ -4,7 +4,7 @@
     <div class="tasks-index-item">
       <div class="row">
         <div class="task-left col-sm-8">
-          <%= task.content %>
+          <%= simple_format(task.content) %>
         </div>
         <div class="task-right col-sm-4">
           <%= link_to("編集", "/tasks/#{task.id}/edit", class: "btn btn-warning btn-sm") %>
