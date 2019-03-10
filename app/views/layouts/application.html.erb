@@ -26,10 +26,10 @@
             <div class="col-sm-6">
               <% if @current_user %>
                 <%= link_to("新しいタスクを作成", "/tasks/new", class: "header-right btn btn-primary") %>
-                <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}", class: "header-right btn btn-success") %>
+                <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}", class: "header-right btn btn-outline-info") %>
               <% else %>
                 <%= link_to("ログイン", "/login", class: "header-right btn btn-primary") %>
-                <%= link_to("ユーザ登録", "/users/new", class: "header-right btn btn-success") %>
+                <%= link_to("ユーザ登録", "/users/new", class: "header-right btn btn-outline-info") %>
               <% end %>
             </div>
           </div>

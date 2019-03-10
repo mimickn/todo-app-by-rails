@@ -7,8 +7,10 @@
           <%= simple_format(task.content) %>
         </div>
         <div class="task-right col-sm-4">
-          <%= link_to("編集", "/tasks/#{task.id}/edit", class: "btn btn-warning btn-sm") %>
-          <%= link_to("削除", "/tasks/#{task.id}/delete", class: "btn btn-warning btn-sm", method: "post") %>
+          <div class="task-btn">
+            <%= link_to("編集", "/tasks/#{task.id}/edit", class: "btn btn-outline-warning btn-sm") %>
+            <%= link_to("削除", "/tasks/#{task.id}/delete", class: "btn btn-outline-warning btn-sm", method: "post") %>
+          </div>
         </div>
       </div>
     </div>
